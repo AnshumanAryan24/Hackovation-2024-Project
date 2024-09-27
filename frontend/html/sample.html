@@ -1,0 +1,24 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function printPDF(searchquery) {
+        fetch(` http://127.0.0.1:5000/relateddesc?searchterm=${searchquery}`)
+          .then((response) => response.text())
+          .then((data) => {
+            console.log(
+              "-------------------------------------------------------------------\n"
+            );
+            console.log(data);
+          })
+          .catch((error) => console.error("Error:", error));
+      }
+    </script>
+  </head>
+  <body>
+    <input id="text1" type="text" />
+    <button onclick='printPDF("compiler design")'>Click Me!</button>
+  </body>
+</html>
