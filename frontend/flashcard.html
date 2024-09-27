@@ -17,19 +17,22 @@
         background: linear-gradient(to right, #000000, #7a7a7a);
         color: white;
       }
+
+      .scrollbar-hidden {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
     </style>
   </head>
-  <body>
+  <body class="">
     <nav class="p-8 bg-[#2f2f2f] w-full">
       <ul
         class="flex flex-wrap justify-end items-center mr-10 font-bold text-white"
       >
-        <li class="mr-10 sm:mr-7"><a href="">Home</a></li>
-        <li class="mr-10 sm:mr-7"><a href="">About</a></li>
-        <li class="mr-10 sm:mr-7"><a href="">Syllabus Upload</a></li>
-        <li class="mr-10 sm:mr-7"><a href="">Cheat Sheets</a></li>
-        <li class="mr-10 sm:mr-7"><a href="">Quiz</a></li>
-        <li class="mr-10 sm:mr-7"><a href="">Flashcards</a></li>
+        <li class="mr-10 sm:mr-7"><a href="index.html">Home</a></li>
+        <li class="mr-10 sm:mr-7"><a href="cheats.html">Formula Sheets</a></li>
+        <li class="mr-10 sm:mr-7"><a href="quiz.html">Quiz</a></li>
+        <li class="mr-10 sm:mr-7"><a href="flashcard.html">Flashcards</a></li>
       </ul>
     </nav>
 
@@ -44,35 +47,73 @@
       class="cards flex flex-wrap justify-center items-center overflow-y-auto mt-5 pt-5 h-[450px]"
     >
       <div
-        class="card-one mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[1000px] h-[400px]"
-      ></div>
+        class="card mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[80%] h-[100%] flex flex-wrap justify-center items-center text-[40px]"
+        id="card1"
+      >
+        Data 1
+      </div>
       <div
-        class="card-two mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[1000px] h-[400px]"
-      ></div>
+        class="card mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[80%] h-[100%] flex flex-wrap justify-center items-center text-[40px]"
+        id="card2"
+      >
+        Data 2
+      </div>
       <div
-        class="card-three mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[1000px] h-[400px]"
-      ></div>
+        class="card mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[80%] h-[100%] flex flex-wrap justify-center items-center text-[40px]"
+        id="card3"
+      >
+        Data 3
+      </div>
       <div
-        class="card-four mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[1000px] h-[400px]"
-      ></div>
+        class="card mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[80%] h-[100%] flex flex-wrap justify-center items-center text-[40px]"
+        id="card4"
+      >
+        Data 4
+      </div>
       <div
-        class="card-five mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[1000px] h-[400px]"
-      ></div>
+        class="card mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[80%] h-[100%] flex flex-wrap justify-center items-center text-[40px]"
+        id="card5"
+      >
+        Data 5
+      </div>
       <div
-        class="card-six mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[1000px] h-[400px]"
-      ></div>
+        class="card mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[80%] h-[100%] flex flex-wrap justify-center items-center text-[40px]"
+        id="card6"
+      >
+        Data 6
+      </div>
       <div
-        class="card-seven mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[1000px] h-[400px]"
-      ></div>
+        class="card mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[80%] h-[100%] flex flex-wrap justify-center items-center text-[40px]"
+        id="card7"
+      >
+        Data 7
+      </div>
       <div
-        class="card-eight mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[1000px] h-[400px]"
-      ></div>
+        class="card mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[80%] h-[100%] flex flex-wrap justify-center items-center text-[40px]"
+        id="card8"
+      >
+        Data 8
+      </div>
       <div
-        class="card-nine mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[1000px] h-[400px]"
-      ></div>
+        class="card mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[80%] h-[100%] flex flex-wrap justify-center items-center text-[40px]"
+        id="card9"
+      >
+        Data 9
+      </div>
       <div
-        class="card-ten mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[1000px] h-[400px]"
-      ></div>
+        class="card mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[80%] h-[100%] flex flex-wrap justify-center items-center text-[40px]"
+        id="card10"
+      >
+        Data 10
+      </div>
+    </div>
+    <div class="flex flex-wrap flex-row justify-center items-center">
+      <button class="rounded-xl px-3 py-2 mx-3 my-2 bg-black" id="prev-btn">
+        Previous
+      </button>
+      <button class="rounded-xl px-3 py-2 mx-3 my-2 bg-black" id="next-btn">
+        Next
+      </button>
     </div>
   </body>
 </html>

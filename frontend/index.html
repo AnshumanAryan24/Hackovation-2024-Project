@@ -18,17 +18,15 @@
       }
     </style>
   </head>
-  <body>
+  <body class="">
     <nav class="p-8 bg-[#2f2f2f] w-full">
       <ul
         class="flex flex-wrap justify-end items-center mr-10 font-bold text-white"
       >
-        <li class="mr-10 sm:mr-7"><a href="">Home</a></li>
-        <li class="mr-10 sm:mr-7"><a href="">About</a></li>
-        <li class="mr-10 sm:mr-7"><a href="">Syllabus Upload</a></li>
-        <li class="mr-10 sm:mr-7"><a href="">Cheat Sheets</a></li>
-        <li class="mr-10 sm:mr-7"><a href="">Quiz</a></li>
-        <li class="mr-10 sm:mr-7"><a href="">Flashcards</a></li>
+        <li class="mr-10 sm:mr-7"><a href="index.html">Home</a></li>
+        <li class="mr-10 sm:mr-7"><a href="cheats.html">Formula Sheets</a></li>
+        <li class="mr-10 sm:mr-7"><a href="quiz.html">Quiz</a></li>
+        <li class="mr-10 sm:mr-7"><a href="flashcard.html">Flashcards</a></li>
       </ul>
     </nav>
 
@@ -72,21 +70,44 @@
     </section>
 
     <section
-      class="sylup flex flex-wrap flex-row justify-center items-center h-full"
+      class="sylup flex flex-wrap flex-col justify-center items-center h-full"
     >
-      <h1 class="text-[40px] pr-10 mr-10">
-        <span class="text-[60px]">S</span>yllabus <br />
-        <span class="text-[60px]">U</span>pload
-      </h1>
-      <form action="quiz.html">
-        <div class="flex flex-col justify-center items-center">
-          <input type="file" class="pb-10 text-[1.3rem]" />
-          <input
-            type="submit"
-            class="cursor-pointer py-2 px-3 bg-black rounded-xl"
-          />
-        </div>
-      </form>
+      <section class="flex flex-row">
+        <h1 class="text-[40px] pr-10 mr-10">
+          <span class="text-[60px]">S</span>yllabus <br />
+          <span class="text-[60px]">U</span>pload
+        </h1>
+        <form action="">
+          <div
+            class="flex flex-col justify-center items-center relative top-[100px] left-[100px]"
+          >
+            <input type="file" class="pb-10 text-[1.3rem]" />
+          </div>
+        </form>
+      </section>
+      <div class="goto flex flex-wrap justify-center items-center p-10 m-10">
+        <a href="quiz.html">
+          <button
+            class="cursor-pointer py-2 px-3 bg-black rounded-xl text-[24px] m-10"
+          >
+            Quiz
+          </button>
+        </a>
+        <a href="cheats.html">
+          <button
+            class="cursor-pointer py-2 px-3 bg-black rounded-xl text-[24px] m-10"
+          >
+            Formula Sheets
+          </button>
+        </a>
+        <a href="flashcard.html">
+          <button
+            class="cursor-pointer py-2 px-3 bg-black rounded-xl text-[24px] m-10"
+          >
+            Flash Cards
+          </button>
+        </a>
+      </div>
     </section>
   </body>
 </html>
