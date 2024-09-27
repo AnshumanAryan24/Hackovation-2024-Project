@@ -8,8 +8,10 @@ def relateddesc(search_term: str, n_words: int = 100):
     if (n_words < 0):
         n_words = 100
     search_term = "_".join(search_term.split())    
-    res_dict = {term: wikipedia.summary()[0:n_words] for term in wikipedia.search(search_term)}
+    res_dict = {term: ' '.join(wikipedia.summary(term).split()[0:n_words]) for term in wikipedia.search(search_term)}
     return res_dict
 
 if __name__ == '__main__':
-    print(relateddesc("Compiler Design", 20))
+    for key, value in relateddesc("Compiler Design", 20).items():
+        print(key, ": ", value)
+        print()
