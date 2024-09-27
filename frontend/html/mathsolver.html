@@ -10,7 +10,6 @@
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="../js/mathsolver.js"></script>
     <style>
       body {
         font-family: "Montserrat", sans-serif;
@@ -24,23 +23,55 @@
       <ul
         class="flex flex-wrap justify-end items-center mr-10 font-bold text-white"
       >
-        <li class="mr-10 sm:mr-7"><a href="index.html">Home</a></li>
-        <li class="mr-10 sm:mr-7"><a href="cheats.html">Formula Sheets</a></li>
-        <li class="mr-10 sm:mr-7"><a href="quiz.html">Quiz</a></li>
-        <li class="mr-10 sm:mr-7"><a href="flashcard.html">Flashcards</a></li>
-        <li class="mr-10 sm:mr-7"><a href="mathsolver.html">MathSolver</a></li>
+        <li class="mr-10 sm:mr-7">
+          <a
+            href="index.html"
+            class="transition duration-300 ease-in-out transform hover:text-yellow-400 hover:scale-110"
+            >Home</a
+          >
+        </li>
+        <li class="mr-10 sm:mr-7">
+          <a
+            href="cheats.html"
+            class="transition duration-300 ease-in-out transform hover:text-yellow-400 hover:scale-110"
+            >Formula Sheets</a
+          >
+        </li>
+        <li class="mr-10 sm:mr-7">
+          <a
+            href="quiz.html"
+            class="transition duration-300 ease-in-out transform hover:text-yellow-400 hover:scale-110"
+            >Quiz</a
+          >
+        </li>
+        <li class="mr-10 sm:mr-7">
+          <a
+            href="flashcard.html"
+            class="transition duration-300 ease-in-out transform hover:text-yellow-400 hover:scale-110"
+            >Flashcards</a
+          >
+        </li>
+        <li class="mr-10 sm:mr-7">
+          <a
+            href="mathsolver.html"
+            class="transition duration-300 ease-in-out transform hover:text-yellow-400 hover:scale-110"
+            >MathSolver</a
+          >
+        </li>
       </ul>
     </nav>
 
     <header class="flex flex-wrap justify-center items-center pt-10">
-      <h1 class="text-[2rem]">
+      <h1 class="text-[2rem] transition-transform duration-500 hover:scale-110">
         <span class="text-[3.5rem] font-bold">M</span>ath
         <span class="text-[3.5rem] font-bold">S</span>olver
       </h1>
     </header>
 
     <section class="heading flex flex-wrap justify-center items-center m-8">
-      <h1 class="text-[24px]">
+      <h1
+        class="text-[24px] transition-colors duration-500 hover:text-yellow-400"
+      >
         <span class="text-[36px]">I</span>nput
         <span class="text-[36px]">Y</span>our
         <span class="text-[36px]">Q</span>uestion
@@ -48,11 +79,16 @@
     </section>
 
     <section class="flex flex-wrap justify-center items-center">
-      <textarea class="bg-blue-100 text-[#000] w-[50%] h-[300px]"></textarea>
+      <textarea
+        class="bg-blue-100 text-[#000] w-[50%] h-[300px] transition-transform duration-500 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+        placeholder="Type your question here..."
+      ></textarea>
     </section>
 
     <div class="flex flex-wrap justify-center items-center w-full">
-      <button class="bg-black rounded-lg px-3 py-2 m-10 text-[24px]">
+      <button
+        class="cursor-pointer py-2 px-3 bg-black rounded-xl text-[24px] m-10 transition transform hover:scale-105 hover:bg-white hover:text-black"
+      >
         Solve
       </button>
     </div>

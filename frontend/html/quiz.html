@@ -24,23 +24,53 @@
       <ul
         class="flex flex-wrap justify-end items-center mr-10 font-bold text-white"
       >
-        <li class="mr-10 sm:mr-7"><a href="index.html">Home</a></li>
-        <li class="mr-10 sm:mr-7"><a href="cheats.html">Formula Sheets</a></li>
-        <li class="mr-10 sm:mr-7"><a href="quiz.html">Quiz</a></li>
-        <li class="mr-10 sm:mr-7"><a href="flashcard.html">Flashcards</a></li>
-        <li class="mr-10 sm:mr-7"><a href="mathsolver.html">MathSolver</a></li>
+        <li class="mr-10 sm:mr-7">
+          <a
+            href="index.html"
+            class="transition duration-300 ease-in-out transform hover:text-yellow-400 hover:scale-110"
+            >Home</a
+          >
+        </li>
+        <li class="mr-10 sm:mr-7">
+          <a
+            href="cheats.html"
+            class="transition duration-300 ease-in-out transform hover:text-yellow-400 hover:scale-110"
+            >Formula Sheets</a
+          >
+        </li>
+        <li class="mr-10 sm:mr-7">
+          <a
+            href="quiz.html"
+            class="transition duration-300 ease-in-out transform hover:text-yellow-400 hover:scale-110"
+            >Quiz</a
+          >
+        </li>
+        <li class="mr-10 sm:mr-7">
+          <a
+            href="flashcard.html"
+            class="transition duration-300 ease-in-out transform hover:text-yellow-400 hover:scale-110"
+            >Flashcards</a
+          >
+        </li>
+        <li class="mr-10 sm:mr-7">
+          <a
+            href="mathsolver.html"
+            class="transition duration-300 ease-in-out transform hover:text-yellow-400 hover:scale-110"
+            >MathSolver</a
+          >
+        </li>
       </ul>
     </nav>
 
     <header class="flex flex-wrap justify-center items-center pt-10">
-      <h1 class="text-[2rem]">
+      <h1 class="text-[2rem] transition-transform duration-500 hover:scale-110">
         <span class="text-[3.5rem] font-bold">Q</span>uiz
       </h1>
     </header>
 
     <div class="flex flex-wrap justify-center items-center w-full h-full">
       <div
-        class="card bg-gradient-to-r from-[#2f2f2f] to-[#1f1f1f] w-[70%] h-[70%] rounded-[100px] flex flex-wrap flex-col justify-around items-center"
+        class="card bg-gradient-to-r from-[#2f2f2f] to-[#1f1f1f] w-[70%] h-[70%] rounded-[100px] flex flex-wrap flex-col justify-around items-center shadow-lg transition-transform duration-300 hover:scale-105"
       >
         <p class="text-[20px]">Question 1</p>
         <div class="flex flex-row">
@@ -66,10 +96,16 @@
       </div>
     </div>
     <div class="flex flex-wrap flex-row justify-center items-center">
-      <button class="rounded-xl px-3 py-2 mx-3 my-2 bg-black" id="prev-btn">
+      <button
+        class="cursor-pointer py-2 px-3 bg-black rounded-xl text-[24px] m-10 transition transform hover:scale-105 hover:bg-white hover:text-black"
+        id="prev-btn"
+      >
         Previous
       </button>
-      <button class="rounded-xl px-3 py-2 mx-3 my-2 bg-black" id="next-btn">
+      <button
+        class="cursor-pointer py-2 px-3 bg-black rounded-xl text-[24px] m-10 transition transform hover:scale-105 hover:bg-white hover:text-black"
+        id="next-btn"
+      >
         Next
       </button>
     </div>

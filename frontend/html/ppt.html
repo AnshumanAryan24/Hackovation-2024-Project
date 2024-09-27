@@ -10,7 +10,6 @@
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="../js/ppt.js"></script>
     <style>
       body {
         font-family: "Montserrat", sans-serif;
@@ -24,30 +23,72 @@
       <ul
         class="flex flex-wrap justify-end items-center mr-10 font-bold text-white"
       >
-        <li class="mr-10 sm:mr-7"><a href="index.html">Home</a></li>
-        <li class="mr-10 sm:mr-7"><a href="cheats.html">Formula Sheets</a></li>
-        <li class="mr-10 sm:mr-7"><a href="quiz.html">Quiz</a></li>
-        <li class="mr-10 sm:mr-7"><a href="flashcard.html">Flashcards</a></li>
-        <li class="mr-10 sm:mr-7"><a href="mathsolver.html">MathSolver</a></li>
+        <li class="mr-10 sm:mr-7">
+          <a
+            href="index.html"
+            class="transition duration-300 ease-in-out transform hover:text-yellow-400 hover:scale-110"
+            >Home</a
+          >
+        </li>
+        <li class="mr-10 sm:mr-7">
+          <a
+            href="cheats.html"
+            class="transition duration-300 ease-in-out transform hover:text-yellow-400 hover:scale-110"
+            >Formula Sheets</a
+          >
+        </li>
+        <li class="mr-10 sm:mr-7">
+          <a
+            href="quiz.html"
+            class="transition duration-300 ease-in-out transform hover:text-yellow-400 hover:scale-110"
+            >Quiz</a
+          >
+        </li>
+        <li class="mr-10 sm:mr-7">
+          <a
+            href="flashcard.html"
+            class="transition duration-300 ease-in-out transform hover:text-yellow-400 hover:scale-110"
+            >Flashcards</a
+          >
+        </li>
+        <li class="mr-10 sm:mr-7">
+          <a
+            href="mathsolver.html"
+            class="transition duration-300 ease-in-out transform hover:text-yellow-400 hover:scale-110"
+            >MathSolver</a
+          >
+        </li>
       </ul>
     </nav>
 
     <header class="flex flex-wrap justify-center items-center pt-10">
-      <h1 class="text-[2rem]">
+      <h1 class="text-[2rem] transition-transform duration-500 hover:scale-110">
         <span class="text-[3.5rem] font-bold">E</span>xtra
         <span class="text-[3.5rem] font-bold">F</span>eatures
       </h1>
     </header>
 
     <section class="flex flex-wrap flex-col justify-center items-center">
-      <h1 class="bg-black rounded-lg text-[36px] px-3 py-4 m-10">
+      <h1
+        class="bg-black rounded-lg text-[36px] px-3 py-4 m-10 transition-transform duration-300 hover:scale-105"
+      >
         Presentation Practice
       </h1>
       <div class="flex flex-wrap flex-row justify-around items-center">
-        <button class="px-2 py-3 m-10 text-[24px]">Upload/Record Video</button>
-        <button class="px-2 py-3 m-10 text-[24px]">Upload PPT</button>
+        <button
+          class="cursor-pointer py-2 px-3 text-[30px] m-10 transition transform hover:scale-105 hover:bg-white hover:text-black"
+        >
+          Upload/Record Video
+        </button>
+        <button
+          class="cursor-pointer py-2 px-3 text-[30px] m-10 transition transform hover:scale-105 hover:bg-white hover:text-black"
+        >
+          Upload PPT
+        </button>
       </div>
-      <button class="bg-black rounded-lg text-[24px] px-2 py-3 m-10">
+      <button
+        class="cursor-pointer py-2 px-3 bg-black rounded-xl text-[24px] m-10 transition transform hover:scale-105 hover:bg-white hover:text-black"
+      >
         Analyze
       </button>
     </section>

@@ -22,18 +22,62 @@
         -ms-overflow-style: none;
         scrollbar-width: none;
       }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fadeInUp {
+        animation: fadeInUp 0.5s ease-out forwards;
+      }
     </style>
   </head>
-  <body class="">
+  <body>
     <nav class="p-8 bg-[#2f2f2f] w-full">
       <ul
         class="flex flex-wrap justify-end items-center mr-10 font-bold text-white"
       >
-        <li class="mr-10 sm:mr-7"><a href="index.html">Home</a></li>
-        <li class="mr-10 sm:mr-7"><a href="cheats.html">Formula Sheets</a></li>
-        <li class="mr-10 sm:mr-7"><a href="quiz.html">Quiz</a></li>
-        <li class="mr-10 sm:mr-7"><a href="flashcard.html">Flashcards</a></li>
-        <li class="mr-10 sm:mr-7"><a href="mathsolver.html">MathSolver</a></li>
+        <li class="mr-10 sm:mr-7">
+          <a
+            href="index.html"
+            class="transition duration-300 ease-in-out transform hover:text-yellow-400 hover:scale-110"
+            >Home</a
+          >
+        </li>
+        <li class="mr-10 sm:mr-7">
+          <a
+            href="cheats.html"
+            class="transition duration-300 ease-in-out transform hover:text-yellow-400 hover:scale-110"
+            >Formula Sheets</a
+          >
+        </li>
+        <li class="mr-10 sm:mr-7">
+          <a
+            href="quiz.html"
+            class="transition duration-300 ease-in-out transform hover:text-yellow-400 hover:scale-110"
+            >Quiz</a
+          >
+        </li>
+        <li class="mr-10 sm:mr-7">
+          <a
+            href="flashcard.html"
+            class="transition duration-300 ease-in-out transform hover:text-yellow-400 hover:scale-110"
+            >Flashcards</a
+          >
+        </li>
+        <li class="mr-10 sm:mr-7">
+          <a
+            href="mathsolver.html"
+            class="transition duration-300 ease-in-out transform hover:text-yellow-400 hover:scale-110"
+            >MathSolver</a
+          >
+        </li>
       </ul>
     </nav>
 
@@ -45,74 +89,80 @@
     </header>
 
     <div
-      class="cards flex flex-wrap justify-center items-center overflow-y-auto mt-5 pt-5 h-[450px]"
+      class="cards flex flex-wrap justify-center items-center overflow-y-auto mt-5 pt-5 h-[450px] scrollbar-hidden"
     >
       <div
-        class="card mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[80%] h-[100%] flex flex-wrap justify-center items-center text-[40px]"
+        class="card mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[80%] h-[100%] flex flex-wrap justify-center items-center text-[40px] transition transform hover:scale-105 animate-fadeInUp"
         id="card1"
       >
         Data 1
       </div>
       <div
-        class="card mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[80%] h-[100%] flex flex-wrap justify-center items-center text-[40px]"
+        class="card mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[80%] h-[100%] flex flex-wrap justify-center items-center text-[40px] transition transform hover:scale-105 animate-fadeInUp"
         id="card2"
       >
         Data 2
       </div>
       <div
-        class="card mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[80%] h-[100%] flex flex-wrap justify-center items-center text-[40px]"
+        class="card mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[80%] h-[100%] flex flex-wrap justify-center items-center text-[40px] transition transform hover:scale-105 animate-fadeInUp"
         id="card3"
       >
         Data 3
       </div>
       <div
-        class="card mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[80%] h-[100%] flex flex-wrap justify-center items-center text-[40px]"
+        class="card mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[80%] h-[100%] flex flex-wrap justify-center items-center text-[40px] transition transform hover:scale-105 animate-fadeInUp"
         id="card4"
       >
         Data 4
       </div>
       <div
-        class="card mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[80%] h-[100%] flex flex-wrap justify-center items-center text-[40px]"
+        class="card mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[80%] h-[100%] flex flex-wrap justify-center items-center text-[40px] transition transform hover:scale-105 animate-fadeInUp"
         id="card5"
       >
         Data 5
       </div>
       <div
-        class="card mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[80%] h-[100%] flex flex-wrap justify-center items-center text-[40px]"
+        class="card mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[80%] h-[100%] flex flex-wrap justify-center items-center text-[40px] transition transform hover:scale-105 animate-fadeInUp"
         id="card6"
       >
         Data 6
       </div>
       <div
-        class="card mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[80%] h-[100%] flex flex-wrap justify-center items-center text-[40px]"
+        class="card mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[80%] h-[100%] flex flex-wrap justify-center items-center text-[40px] transition transform hover:scale-105 animate-fadeInUp"
         id="card7"
       >
         Data 7
       </div>
       <div
-        class="card mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[80%] h-[100%] flex flex-wrap justify-center items-center text-[40px]"
+        class="card mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[80%] h-[100%] flex flex-wrap justify-center items-center text-[40px] transition transform hover:scale-105 animate-fadeInUp"
         id="card8"
       >
         Data 8
       </div>
       <div
-        class="card mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[80%] h-[100%] flex flex-wrap justify-center items-center text-[40px]"
+        class="card mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[80%] h-[100%] flex flex-wrap justify-center items-center text-[40px] transition transform hover:scale-105 animate-fadeInUp"
         id="card9"
       >
         Data 9
       </div>
       <div
-        class="card mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[80%] h-[100%] flex flex-wrap justify-center items-center text-[40px]"
+        class="card mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[80%] h-[100%] flex flex-wrap justify-center items-center text-[40px] transition transform hover:scale-105 animate-fadeInUp"
         id="card10"
       >
         Data 10
       </div>
     </div>
     <div class="flex flex-wrap flex-row justify-center items-center">
-      <button class="rounded-xl px-3 py-2 mx-3 my-2 bg-black" id="prev-btn">
+      <button
+        class="cursor-pointer py-2 px-3 bg-black rounded-xl text-[24px] m-10 transition transform hover:scale-105 hover:bg-white hover:text-black"
+        id="prev-btn"
+      >
         Previous
       </button>
-      <button class="rounded-xl px-3 py-2 mx-3 my-2 bg-black" id="next-btn">
+      <button
+        class="cursor-pointer py-2 px-3 bg-black rounded-xl text-[24px] m-10 transition transform hover:scale-105 hover:bg-white hover:text-black"
+        id="next-btn"
+      >
         Next
       </button>
     </div>
