@@ -1,19 +1,18 @@
-from PyPDF2 import PdfReader
-from flask import Flask, jsonify, request 
-app = Flask(__name__)
-@app.route('/pdfparsingtool', methods=['GET'])
-def parse():
-  PATH = request.args.get('number', default=1, type=str)
-  reader = PdfReader(PATH)
-  return jsonify({'pages': [page.extract_text() for page in reader.pages()]})
-# meta = reader.metadata
-# print("Total Pages: ", len(reader.pages))
-# # All of the following could be None!
-# print("Author: ", meta.author)
-# print("Creator: ", meta.creator)
-# print("Producer: ", meta.producer)
-# print("Subject: ", meta.subject)
-# print("Title: ", meta.title)
+from flask import Flask,render_template, request, jsonify
+
+app = Flask(__name__,template_folder="../")
+
+@app.route("/")
+def hello():
+    return render_template('html/index.html')
+
+@app.route('/process', methods=['POST'])
+def process():
+    data = request.get_json() # retrieve the data sent from JavaScript
+
+    # process the data using Python code
+    result = data['value'] + " hello world"
+    return jsonify(result=result) # return the result to JavaScript
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=True)
