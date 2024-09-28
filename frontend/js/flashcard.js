@@ -2,15 +2,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const cardsContainer = document.querySelector(".cards");
   let currentIndex = 0;
 
-  // Fetch JSON data
-  fetch("../data.json") // Adjust path if necessary
+  fetch("../data.json")
     .then((response) => response.json())
     .then((data) => {
       const cardsData = data.compiler_design;
 
-      // Function to render a single card
       function renderCard(index) {
-        // Clear existing card
         cardsContainer.innerHTML = "";
 
         if (index >= 0 && index < cardsData.length) {
@@ -23,10 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
 
-      // Initial render
       renderCard(currentIndex);
 
-      // Button event listeners
       document.getElementById("prev-btn").addEventListener("click", () => {
         if (currentIndex > 0) {
           currentIndex -= 1;
