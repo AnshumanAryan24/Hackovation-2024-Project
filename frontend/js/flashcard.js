@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const cardsContainer = document.querySelector(".cards");
   let currentIndex = 0;
 
-  fetch("../data.json")
+  fetch(` http://127.0.0.1:5000/pdfparse?pdfpath=${document.getElementById()}`)
     .then((response) => response.json())
     .then((data) => {
       const cardsData = data.compiler_design;
