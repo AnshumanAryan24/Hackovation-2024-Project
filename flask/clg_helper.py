@@ -7,7 +7,7 @@ app = Flask(__name__,template_folder="../frontend/html")
 
 @app.route("/")
 def init_app():
-    return render_template('sample.html')
+    return render_template('index.html')
 
 # ------------------------------------------------------
 # WIKIPEDIA
@@ -15,6 +15,13 @@ def init_app():
 @app.route("/relateddesc")
 def relateddesc():
     search_term = request.args.get('searchterm', default=1, type=str).replace(r'%20', r' ')
+    
+    print()
+    print("--------------------------------")
+    print(search_term)
+    print("--------------------------------")
+    print()
+
     return get_wikipedia_results(search_term=search_term, n_words=20)
 
 def get_wikipedia_results(search_term: str, n_words: int = 100):
@@ -25,4 +32,5 @@ def get_wikipedia_results(search_term: str, n_words: int = 100):
     return jsonify({'results':str(res_dict)})
 
 
-app.run(debug=True, port=5000)
+if __name__ == '__main__':
+    app.run(debug=True, port=5000)
