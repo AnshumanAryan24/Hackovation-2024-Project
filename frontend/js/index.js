@@ -1,10 +1,17 @@
-const fileBtn = document.getElementById("file-btn");
+function printPDF(searchquery) {
+  fetch(`http://127.0.0.1:5000/pdfparsingtool?pdfpath=${searchquery}`)
+    .then((response) => response.text())
+    .then((data) => {
+      console.log(
+        "-------------------------------------------------------------------\n"
+      );
+      console.log(data);
 
-function getFile() {
-    console.log(fileBtn.files[0]);
-    // return fileBtn.files[0];
-}
+      // Store the data in sessionStorage
+      sessionStorage.setItem("pdfData", data);
 
-function generateFlashcard() {
-
+      // Redirect to flashcards.html
+      window.location.href = "flashcards.html";
+    })
+    .catch((error) => console.error("Error:", error));
 }
