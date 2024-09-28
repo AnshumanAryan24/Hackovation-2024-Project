@@ -48,7 +48,8 @@ def get_wikipedia_results(search_term: str, n_words: int = 100):
 
 # -------------------------------- PDF PARSER --------------------------------
 @app.route("/pdfparse")
-def get_pdftopics(pdf_path: str):
+def get_pdftopics():
+    pdf_path = request.args.get('pdfpath', default=1, type=str)
     reader = PyPDF2.PdfReader(pdf_path)
 
     pages = [page.extract_text() for page in reader.pages]
