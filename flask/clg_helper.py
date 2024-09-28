@@ -1,5 +1,5 @@
 import wikipedia
-
+import PyPDF2
 from flask import Flask,render_template, request, jsonify
 
 
@@ -43,13 +43,18 @@ def relateddesc():
     print()
 
     return get_wikipedia_results(search_term=search_term, n_words=20)
-
 def get_wikipedia_results(search_term: str, n_words: int = 100):
     if (n_words < 0):
         n_words = 100
     search_term = "_".join(search_term.split()) 
     res_dict = {term: wikipedia.summary(term)[0:n_words] for term in wikipedia.search(search_term) if len(term)!=0}
     return jsonify({'results':str(res_dict)})
+
+@app.route("/pdfparse")
+def pdfparse():
+    pdf_path = request.args.get('pdfpath', default=1, type=str)
+    reader = PyPDF2.PdfReader(pdf_path)
+    return jsonify({'pages': [page.extract_text() for page in reader.pages()]})
 
 
 if __name__ == '__main__':

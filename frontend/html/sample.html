@@ -5,7 +5,7 @@
     <title>Document</title>
     <script>
       function printPDF(searchquery) {
-        fetch(` http://127.0.0.1:5000/relateddesc?searchterm=${searchquery}`)
+        fetch(` http://127.0.0.1:5000/pdfparse?searchterm=${searchquery}`)
           .then((response) => response.text())
           .then((data) => {
             console.log(
