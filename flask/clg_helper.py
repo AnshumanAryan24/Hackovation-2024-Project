@@ -1,7 +1,7 @@
 import wikipedia
 import PyPDF2
 from flask import Flask,render_template, request, jsonify
-from summarizer import Summarizer, TransformerSummarizer
+# from summarizer import Summarizer, TransformerSummarizer
 
 
 app = Flask(__name__,template_folder="../frontend/html")
@@ -9,8 +9,8 @@ app = Flask(__name__,template_folder="../frontend/html")
 # -------------------------------- ROUTING --------------------------------
 @app.route("/")
 def init_app():
-    global GPT2_model
-    GPT2_model = TransformerSummarizer(transformer_type="GPT2",transformer_model_key="gpt2-medium")
+    # global GPT2_model
+    # GPT2_model = TransformerSummarizer(transformer_type="GPT2",transformer_model_key="gpt2-medium")
     return render_template('index.html')
 
 @app.route("/flashcard.html")
