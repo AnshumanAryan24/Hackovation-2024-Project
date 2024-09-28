@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const cardsContainer = document.querySelector(".cards");
   let currentIndex = 0;
-  const cardsPerPage = 5; // Adjust the number of cards to display at once
 
   // Fetch JSON data
   fetch("../data.json") // Adjust path if necessary
@@ -9,40 +8,36 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((data) => {
       const cardsData = data.compiler_design;
 
-      // Function to render cards
-      function renderCards(startIndex) {
-        // Clear existing cards
+      // Function to render a single card
+      function renderCard(index) {
+        // Clear existing card
         cardsContainer.innerHTML = "";
-        // Create card elements
-        for (
-          let i = startIndex;
-          i < startIndex + cardsPerPage && i < cardsData.length;
-          i++
-        ) {
+
+        if (index >= 0 && index < cardsData.length) {
           const card = document.createElement("div");
           card.className =
-            "card mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[80%] h-[100%] flex flex-wrap justify-center items-center text-[40px] transition transform hover:scale-105 animate-fadeInUp";
-          card.id = `card${i + 1}`;
-          card.innerHTML = `<strong>${cardsData[i].name}</strong>: ${cardsData[i].description}`;
+            "card mb-10 bg-gradient-to-l from-[#aaa] to-[#555] rounded-[100px] w-[70%] h-[80%] flex flex-wrap flex-col justify-center items-center text-[24px] transition transform hover:scale-105 animate-fadeInUp";
+          card.id = `card${index + 1}`;
+          card.innerHTML = `<strong>${cardsData[index].name}</strong> ${cardsData[index].description}`;
           cardsContainer.appendChild(card);
         }
       }
 
       // Initial render
-      renderCards(currentIndex);
+      renderCard(currentIndex);
 
       // Button event listeners
       document.getElementById("prev-btn").addEventListener("click", () => {
         if (currentIndex > 0) {
-          currentIndex -= cardsPerPage;
-          renderCards(currentIndex);
+          currentIndex -= 1;
+          renderCard(currentIndex);
         }
       });
 
       document.getElementById("next-btn").addEventListener("click", () => {
-        if (currentIndex + cardsPerPage < cardsData.length) {
-          currentIndex += cardsPerPage;
-          renderCards(currentIndex);
+        if (currentIndex + 1 < cardsData.length) {
+          currentIndex += 1;
+          renderCard(currentIndex);
         }
       });
     })

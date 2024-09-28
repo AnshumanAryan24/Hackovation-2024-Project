@@ -7,7 +7,6 @@ function printPDF(searchquery) {
       );
       console.log(data);
 
-<<<<<<< HEAD
       // Store the data in sessionStorage
       sessionStorage.setItem("pdfData", data);
 
@@ -16,9 +15,7 @@ function printPDF(searchquery) {
     })
     .catch((error) => console.error("Error:", error));
 }
-=======
 function getFile() {
-    console.log(fileBtn.value);
-    // return fileBtn.files[0];
+  console.log(fileBtn.value);
+  // return fileBtn.files[0];
 }
->>>>>>> c55cb565f0bbb5e6d9d0349b8e26e589cc405b63
