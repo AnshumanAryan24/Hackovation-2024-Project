@@ -9,6 +9,26 @@ app = Flask(__name__,template_folder="../frontend/html")
 def init_app():
     return render_template('index.html')
 
+@app.route("/flashcard.html")
+def get_flashcard():
+    return render_template('flashcard.html')
+
+@app.route("/mathsolver.html")
+def get_mathsolver():
+    return render_template('mathsolver.html')
+
+@app.route("/ppt.html")
+def get_ppt():
+    return render_template('ppt.html')
+
+@app.route("/quiz.html")
+def get_quiz():
+    return render_template('quiz.html')
+
+@app.route("/cheats.html")
+def get_cheats():
+    return render_template('cheats.html')
+
 # ------------------------------------------------------
 # WIKIPEDIA
 
