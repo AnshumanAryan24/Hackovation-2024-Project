@@ -1,0 +1,54 @@
+{
+  "compiler_design": [
+    {
+      "id": 1,
+      "name": "Lexical Analysis",
+      "description": "The first phase of a compiler, responsible for tokenizing the source code."
+    },
+    {
+      "id": 2,
+      "name": "Syntax Analysis",
+      "description": "Checks the source code for grammatical correctness using a parse tree."
+    },
+    {
+      "id": 3,
+      "name": "Semantic Analysis",
+      "description": "Ensures that the code is semantically correct and checks for type errors."
+    },
+    {
+      "id": 4,
+      "name": "Intermediate Code Generation",
+      "description": "Transforms the source code into an intermediate representation for optimization."
+    },
+    {
+      "id": 5,
+      "name": "Code Optimization",
+      "description": "Improves the intermediate code to make it run faster and more efficiently."
+    },
+    {
+      "id": 6,
+      "name": "Code Generation",
+      "description": "Converts the optimized intermediate code into target machine code."
+    },
+    {
+      "id": 7,
+      "name": "Code Optimization Techniques",
+      "description": "Various methods to enhance code performance, including inlining and loop transformations."
+    },
+    {
+      "id": 8,
+      "name": "Error Handling",
+      "description": "Manages errors detected during compilation, providing feedback to the programmer."
+    },
+    {
+      "id": 9,
+      "name": "Symbol Table Management",
+      "description": "Maintains information about identifiers, including their types and scope."
+    },
+    {
+      "id": 10,
+      "name": "Linking and Loading",
+      "description": "Combines various code modules and prepares the executable program."
+    }
+  ]
+}
