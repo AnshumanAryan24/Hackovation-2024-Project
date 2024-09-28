@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz</title>
+    <title>Math Solver</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,9 +17,46 @@
         background: linear-gradient(to right, #000000, #7a7a7a);
         color: white;
       }
+      .keyboard-button {
+        padding: 15px;
+        margin: 8px;
+        width: 70px;
+        height: 70px;
+        text-align: center;
+        cursor: pointer;
+        background-color: #3b3b3b;
+        color: white;
+        border-radius: 12px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        transition: transform 0.2s ease, background-color 0.2s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .keyboard-button:hover {
+        transform: translateY(-5px) scale(1.1);
+        background-color: #ffda44;
+        color: black;
+      }
+      .keyboard-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+      }
+      .row {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+      .wide-button {
+        width: 150px;
+      }
     </style>
   </head>
-  <body class="">
+  <body>
     <nav class="p-8 bg-[#2f2f2f] w-full">
       <ul
         class="flex flex-wrap justify-end items-center mr-10 font-bold text-white"
@@ -80,17 +118,127 @@
 
     <section class="flex flex-wrap justify-center items-center">
       <textarea
+        id="question-input"
         class="bg-blue-100 text-[#000] w-[50%] h-[300px] transition-transform duration-500 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-yellow-400"
         placeholder="Type your question here..."
       ></textarea>
     </section>
 
+    <section class="flex flex-wrap justify-center items-center w-full m-10">
+      <div class="keyboard-container">
+        <!-- First row: Scientific Functions -->
+        <div class="row">
+          <div class="keyboard-button" onclick="insertCharacter('sin(')">
+            sin
+          </div>
+          <div class="keyboard-button" onclick="insertCharacter('cos(')">
+            cos
+          </div>
+          <div class="keyboard-button" onclick="insertCharacter('tan(')">
+            tan
+          </div>
+          <div class="keyboard-button" onclick="insertCharacter('log(')">
+            log
+          </div>
+          <div class="keyboard-button" onclick="insertCharacter('sqrt(')">
+            √
+          </div>
+        </div>
+
+        <!-- Second row: Inverse Trigonometry -->
+        <div class="row">
+          <div class="keyboard-button" onclick="insertCharacter('asin(')">
+            sin⁻¹
+          </div>
+          <div class="keyboard-button" onclick="insertCharacter('acos(')">
+            cos⁻¹
+          </div>
+          <div class="keyboard-button" onclick="insertCharacter('atan(')">
+            tan⁻¹
+          </div>
+          <div class="keyboard-button" onclick="insertCharacter('(')">(</div>
+          <div class="keyboard-button" onclick="insertCharacter(')')">)</div>
+        </div>
+
+        <!-- Third row: Variables and Exponents -->
+        <div class="row">
+          <div class="keyboard-button" onclick="insertCharacter('x')">x</div>
+          <div class="keyboard-button" onclick="insertCharacter('y')">y</div>
+          <div class="keyboard-button" onclick="insertCharacter('^2')">x²</div>
+          <div class="keyboard-button" onclick="insertCharacter('^3')">x³</div>
+          <div class="keyboard-button" onclick="insertCharacter('^')">^</div>
+        </div>
+
+        <!-- Fourth row: Numbers and Basic Operations -->
+        <div class="row">
+          <div class="keyboard-button" onclick="insertCharacter('7')">7</div>
+          <div class="keyboard-button" onclick="insertCharacter('8')">8</div>
+          <div class="keyboard-button" onclick="insertCharacter('9')">9</div>
+          <div class="keyboard-button" onclick="insertCharacter('/')">/</div>
+          <div class="keyboard-button" onclick="insertCharacter('*')">*</div>
+        </div>
+
+        <!-- Fifth row: More Numbers and Operations -->
+        <div class="row">
+          <div class="keyboard-button" onclick="insertCharacter('4')">4</div>
+          <div class="keyboard-button" onclick="insertCharacter('5')">5</div>
+          <div class="keyboard-button" onclick="insertCharacter('6')">6</div>
+          <div class="keyboard-button" onclick="insertCharacter('-')">-</div>
+          <div class="keyboard-button" onclick="insertCharacter('+')">+</div>
+        </div>
+
+        <!-- Sixth row: Final Numbers, Decimal, and Equals -->
+        <div class="row">
+          <div class="keyboard-button" onclick="insertCharacter('1')">1</div>
+          <div class="keyboard-button" onclick="insertCharacter('2')">2</div>
+          <div class="keyboard-button" onclick="insertCharacter('3')">3</div>
+          <div class="keyboard-button" onclick="insertCharacter('0')">0</div>
+          <div class="keyboard-button" onclick="insertCharacter('.')">.</div>
+        </div>
+
+        <!-- Seventh row: Equals and Clear -->
+        <div class="row">
+          <div class="keyboard-button wide-button" onclick="solve()">=</div>
+          <div class="keyboard-button wide-button" onclick="clearInput()">
+            C
+          </div>
+        </div>
+      </div>
+    </section>
+
     <div class="flex flex-wrap justify-center items-center w-full">
       <button
         class="cursor-pointer py-2 px-3 bg-black rounded-xl text-[24px] m-10 transition transform hover:scale-105 hover:bg-white hover:text-black"
+        onclick="solve()"
       >
         Solve
       </button>
+      <button
+        class="cursor-pointer py-2 px-3 bg-black rounded-xl text-[24px] m-10 transition transform hover:scale-105 hover:bg-white hover:text-black"
+        onclick="clearInput()"
+      >
+        Clear
+      </button>
     </div>
+
+    <script>
+      function insertCharacter(character) {
+        document.getElementById("question-input").value += character;
+      }
+
+      function solve() {
+        try {
+          const expression = document.getElementById("question-input").value;
+          const result = eval(expression);
+          alert("Result: " + result);
+        } catch (error) {
+          alert("Invalid Expression");
+        }
+      }
+
+      function clearInput() {
+        document.getElementById("question-input").value = "";
+      }
+    </script>
   </body>
 </html>
